@@ -44,6 +44,7 @@ class SQLhelpers():
             console.warning("Token doesn't exist\n" + token)
             return False
 
+    #Finally works
     def insert_new_user(self, username, password, token):
         User.insert({
             User.Username: username,
