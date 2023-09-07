@@ -15,4 +15,4 @@ class Login(tornado.web.RequestHandler):
                 return self.write("0") # Success
             return self.write("1") # Incorrect Login
         except:
-            return self.write("2") # Incorrect Content
+            return self.write("2") # Exception error

@@ -1,22 +1,15 @@
 import tornado.web
-import random, os
+import random
 from Classes.Database import *
+from string import ascii_letters
 
 class GenerateToken(tornado.web.RequestHandler):
-    global Char_Array
-
-    Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-    Char_Array = []
-
-    for Character in Characters:
-        Char_Array.append(Character)
-
     def get(self, admintoken):
         if admintoken == "Admin":
             Token = ""
 
-            for i in range(30):
-                Token += random.choice(Char_Array)
+            for _ in range(30):
+                Token += random.choice(ascii_letters + "0123456789")
 
             sqlhelpers.insert_token(token=Token)
 

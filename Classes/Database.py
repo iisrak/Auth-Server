@@ -1,6 +1,6 @@
 from peewee import *
 from playhouse.shortcuts import model_to_dict
-from Classes.Console.console import *
+from Classes.Console.console import console
 TokenDB = SqliteDatabase("Tokens.db")
 
 class BaseModel(Model):
