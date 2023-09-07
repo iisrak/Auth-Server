@@ -3,6 +3,6 @@ Web based login and register in python.
 It uses tornado for the web server and peewee for the database.
 
 # Endpoints
-/success/<ADMINTOKEN> (get) -> Generates a new token
-/register (post username, password, token) -> Writes 3 (exception error / incorrect body), 2 (username already exists), 1 (invalid token), 0 (success)
+/success/<ADMINTOKEN> (get) -> Generates a new token\n
+/register (post username, password, token) -> Writes 3 (exception error / incorrect body), 2 (username already exists), 1 (invalid token), 0 (success)\n
 /login (post username, password) -> Writes 2 (exception error / incorrect body), 1 (incorrect login), 0 (success)
